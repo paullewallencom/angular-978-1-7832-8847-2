@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Angular Bar Chart: Widget</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="myApp">
+  <bar-chart width="400" height="400" gap="5" data="[{ color: 'blue', percentage: 50 }, { color: 'orange', percentage: 60 }, { color: 'red', percentage: 10 }]"></bar-chart>
+
+  <!--(if target dev)><!-->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/directives.js"></script>
+  <!--<!(endif)-->
+  <!--(if target dist)>
+  <script src="js/fun-with-charts.js"></script>
+  <!(endif)-->
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Angular UI Maps</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="myApp">
+
+<section id="map" ng-controller="MapCtrl">
+    <div data-ui-map="myMap" ui-options="mapOptions" class="map-canvas"
+         data-ui-event="eventBinding"></div>
+
+    <div class="marker" ng-repeat="marker in myMarkers" ng-click="myMap.panTo(marker.getPosition())">
+        Lat: {{ marker.getPosition().lat() }} <br />Lng: {{ marker.getPosition().lng() }}</div>
+
+</section>
+
+<!--(if target dev)><!-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+<script src="bower_components/angular-ui-map/ui-map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places,weather&sensor=false&callback=onGoogleReady"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<!--<!(endif)-->
+<!--(if target dist)>
+<script src="js/fun-with-ui-modules.js"></script>
+<!(endif)-->
+</body>
+</html>
